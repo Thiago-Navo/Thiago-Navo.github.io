@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Hack", "Source Code Pro", monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 110%;
+    height: 110%;
+
+    background: url("hack.gif")center center;
+    background-size: cover;
+
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.0);
+
+    z-index: -1;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color:  #00ff00;
+}
+
+.login-box {
+    background: url("drag.png")center center;
+    background-size: cover;
+    height: 100px;
+    padding: 100px;
+    border-radius: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.video-tela {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: black;
+}
+
+.video-tela video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
